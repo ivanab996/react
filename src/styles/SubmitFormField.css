@@ -1,9 +1,3 @@
-.submit-form-field {
-    background-color: burlywood;
-}
-
-.submit-form-field button {
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+.random-name-form-field {
+    margin: 16px 0;
 }
