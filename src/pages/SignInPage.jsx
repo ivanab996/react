@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AvatarFormField } from "../components/AvatarFormField";
 import { Button } from "../components/Button";
 import { FormField } from "../components/FormField";
 import { InputFormField } from "../components/InputFormField";
@@ -24,6 +25,7 @@ export function SignInPage(props) {
         <div className="sign-in-page">
             <div className="card">
                 <form className="sign-in-form" onSubmit={handleSubmit}>
+                    <AvatarFormField />
                     <InputFormField id="input" label="username" type="text" onChange={handleUsernameChange} value={formState}/>
                     <FormField>
                         <RandomNameButton onRandomName={handleUsernameChange} />
