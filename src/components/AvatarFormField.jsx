@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { FormField } from "./FormField";
+import { avatarImages } from "../library/avatar";
 
-const avatarImages = [
-    '/avatars/smile.png',
-    '/avatars/witcher.webp',
-    '/avatars/woman.png',
-]
+
 
 export function AvatarFormField(props) {
     const [index, setIndex] = useState(0);
@@ -25,6 +22,8 @@ export function AvatarFormField(props) {
         }
         console.log(index);
     }
+
+    props.onChange(index);
 
     return (
         <FormField>

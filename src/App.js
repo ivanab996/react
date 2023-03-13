@@ -6,17 +6,20 @@ import { Counter } from "./components/Counter";
 
 function App() {
   const [ username, setUsername] = useState('');
+  const [ avatarIndex, setAvatar] = useState(0);
   
-  function handleSubmit(username) {
-      setUsername(username);
+  function handleSubmit(user) {
+      setUsername(user.username);
+      setAvatar(user.avatarIndex);
   }
+
 
   return (
 
     <div>
       <Counter initialValue={11} step={1.23} precision={2} />
-      {username === '' && <SignInPage onSubmit={handleSubmit}/>}
-      {username !== '' && <ChatPage />}
+      {username === '' && <SignInPage onSubmit={handleSubmit} />}
+      {username !== '' && <ChatPage username={username} avatarIndex={avatarIndex}/>}
     </div>
   );
 }
